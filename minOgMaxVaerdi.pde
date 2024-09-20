@@ -1,5 +1,12 @@
-Deklarer en variabel f af type float og initier med værdien af sqrt(2)*sqrt(2). 
-Brug kommandoen println(f); til at udskrive værdien af f.
+//deklarer en variabel af datatype du vil teste
+char c= (char)65040; // her typecaster vi en integerværdi over i en char
 
-Deklarer en variabel d af type double og initier med værdien af Math.sqrt(2)*Math.sqrt(2). 
-Brug kommandoen println(d); til at udskrive værdien af d.
+
+void setup() {}
+
+void draw() {
+
+  println(c); // udskriver inholdet af c, hvilken karakter den repræsenterer
+  c+=1; // lægger værdien 1 til c
+  println(Integer.valueOf(c)); // udskriver integer værdien af karakteren
+}
