@@ -1,0 +1,85 @@
+     opgave 2.1
+int har en størrelse på 32 bits og en range of values fra -2.147.483.648 til 2.147.483.647
+float har en størrelse på 32 bits og en range of values fra 1.4*10^45 til 3.4*10^38
+char har en størrelse på 16 bits og en range of values fra 0 til 65.535
+boolean har en størrelse på 1 bit og values der er enten true eller false
+byte har en størrelse på 8 bits of en range of values fra -128 til 127
+short har en størrelse på 16 bits og en range of values fra -32.768 til 32767
+long har en størrelse 64 bits og en range of values fra −9.223.372.036.854.775.808 til 9.223.372.036.854.775.807
+double har en størrelse på 64 bits og en range of values fra 4.9*10^-324 til 1.7*10^308
+
+     opgave 2.2 (CREDITS: STOR HJÆLP OG INSPIRATION FRA CHATGPT 4-o modellen)
+void setup() {
+  size(600, 400);  // Set the canvas size
+  background(255); // Set background color to white
+  fill(0);         // Set text color to black
+  textSize(20);    // Set the text size
+  
+  int y = 20; // Starting y position for text
+  
+  // byte
+  byte byteMin = -128;
+  byte byteMax = 127;
+  text("byte: " + byteMin + " to " + byteMax, 20, y);
+  y += 20;
+  
+  // short
+  short shortMin = -32768;
+  short shortMax = 32767;
+  text("short: " + shortMin + " to " + shortMax, 20, y);
+  y += 20;
+  
+  // int
+  int intMin = -2147483648;
+  int intMax = 2147483647;
+  text("int: " + intMin + " to " + intMax, 20, y);
+  y += 20;
+  
+  // long
+  long longMin = -9223372036854775808L;
+  long longMax = 9223372036854775807L;
+  text("long: " + longMin + " to " + longMax, 20, y);
+  y += 20;
+  
+  // float
+  text("float: " + Float.MIN_VALUE + " to " + Float.MAX_VALUE, 20, y);
+  y += 20;
+  
+  // double
+  text("double: " + Double.MIN_VALUE + " to " + Double.MAX_VALUE, 20, y);
+  y += 20;
+  
+  // char
+  char charMin = 0;
+  char charMax = 65535;
+  text("char: " + (int)charMin + " to " + (int)charMax, 20, y);
+  y += 20;
+  
+  // boolean
+  text("boolean: " + false + " or " + true, 20, y);
+}
+
+opgave 2.3 (CREDITS: STOR HJÆLP OG INSPIRATION FRA CHATGPT 4-o modellen)
+void setup() {
+  size(400, 200);  // Set canvas size
+  background(255); // Set background to white
+  fill(0);         // Set text color to black
+  textSize(20);    // Set text size
+
+  // Using Processing's sqrt(), which returns a float
+  float f = sqrt(2);
+  float resultF = f * f;
+  
+  // Using Java's Math.sqrt(), which returns a double
+  double d = Math.sqrt(2);
+  double resultD = d * d;
+
+  // Displaying results on canvas
+  text("float sqrt(2): " + f, 20, 50);
+  text("float sqrt(2) * sqrt(2): " + resultF, 20, 80);
+  
+  text("double Math.sqrt(2): " + d, 20, 130);
+  text("double Math.sqrt(2) * Math.sqrt(2): " + resultD, 20, 160);
+}
+forskellen på de 2 er at double er mere præcis og lander på stort set præcis 2 mens float er også temmelig
+præcis dog når den ikke op på 2 og ligger omkring 1.999999 ca.
